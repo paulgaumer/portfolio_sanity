@@ -36,12 +36,18 @@ export default {
     {
       name: 'backImage',
       title: 'Back Image',
-      type: 'image'
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     },
     {
       name: 'frontImage',
       title: 'Front Image',
-      type: 'image'
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     },
     {
       name: 'description',
