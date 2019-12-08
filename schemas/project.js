@@ -1,47 +1,64 @@
 export default {
-  name: "project",
-  title: "Project",
-  type: "document",
+  name: 'project',
+  title: 'Project',
+  type: 'document',
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string"
+      name: 'title',
+      title: 'Title',
+      type: 'string'
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
       options: {
-        source: "title",
+        source: 'title',
         maxLength: 96
       }
     },
     {
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: { type: "author" }
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime'
     },
     {
-      name: "url",
-      title: "Website Url",
-      type: "string"
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: { type: 'author' }
     },
     {
-      name: "backImage",
-      title: "Back Image",
-      type: "image"
+      name: 'url',
+      title: 'Website Url',
+      type: 'string'
     },
     {
-      name: "frontImage",
-      title: "Front Image",
-      type: "image"
+      name: 'backImage',
+      title: 'Back Image',
+      type: 'image'
     },
     {
-      name: "description",
-      title: "Description",
-      type: "text"
+      name: 'frontImage',
+      title: 'Front Image',
+      type: 'image'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text'
+    }
+  ],
+  orderings: [
+    {
+      title: 'Published At, New',
+      name: 'publishedAtDesc',
+      by: [{ field: 'publishedAt', direction: 'desc' }]
+    },
+    {
+      title: 'Published At, Old',
+      name: 'publishedAtAsc',
+      by: [{ field: 'publishedAt', direction: 'asc' }]
     }
   ]
 };
