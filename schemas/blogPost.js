@@ -1,6 +1,6 @@
 export default {
-  name: 'project',
-  title: 'Project',
+  name: 'blogPost',
+  title: 'Blog Post',
   type: 'document',
   fields: [
     {
@@ -21,38 +21,6 @@ export default {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-    },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: { type: 'author' },
-    },
-    {
-      name: 'url',
-      title: 'Website Url',
-      type: 'string',
-    },
-    {
-      name: 'repoUrl',
-      title: 'Repo Url',
-      type: 'string',
-    },
-    // {
-    //   name: 'backImage',
-    //   title: 'Back Image',
-    //   type: 'image',
-    //   options: {
-    //     hotspot: true,
-    //   },
-    // },
-    {
-      name: 'frontImage',
-      title: 'Front Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: 'blockDescription',
