@@ -23,6 +23,13 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'summary',
+      title: 'Summary',
+      type: 'text',
+      rows: 5,
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'blockDescription',
       title: 'Description',
       type: 'blockContent',
